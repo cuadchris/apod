@@ -2,7 +2,7 @@ import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { TextField } from "@mui/material";
 
-export const Picker = ({ value, setValue }) => {
+export const Picker = ({ date, setDate }) => {
   return (
     <>
     
@@ -11,9 +11,9 @@ export const Picker = ({ value, setValue }) => {
         disableFuture = {true}
         minDate = "06/16/1995"
         label="Pick a date."
-        value={value}
+        value={date}
         onChange={(newValue) => {
-          setValue(newValue);
+          setDate(newValue);
         }}
         renderInput={(params) => (
           <TextField {...params} helperText={params?.inputProps?.placeholder} />

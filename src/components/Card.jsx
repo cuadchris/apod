@@ -3,7 +3,7 @@ import ReactCardFlip from "react-card-flip";
 import { Back } from "./Back";
 import { Front } from "./Front";
 
-export const Card = () => {
+export const Card = ({photoData}) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -13,9 +13,9 @@ export const Card = () => {
       isFlipped={isFlipped}
       flipDirection="horizontal"
     >
-      <Front isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
+      <Front photoData={photoData} isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
 
-      <Back isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
+      <Back photoData={photoData} isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
     </ReactCardFlip>
   );
 };
