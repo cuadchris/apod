@@ -8,7 +8,7 @@ function App() {
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
   const [photoData, setPhotoData] = useState({});
 
-  const getPhoto = async () => {
+  const getTodayPhoto = async () => {
     const params = new URLSearchParams({
       date: date,
       api_key: process.env.REACT_APP_API_KEY,
@@ -23,7 +23,7 @@ function App() {
   };
 
   useEffect(() => {
-    getPhoto();
+    getTodayPhoto();
   }, []);
 
   return (
