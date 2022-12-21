@@ -6,6 +6,8 @@ export const Picker = ({ value, setValue }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <DatePicker
+        disableFuture = {true}
+        minDate = "06/16/1995"
         label="Pick a date."
         value={value}
         onChange={(newValue) => {

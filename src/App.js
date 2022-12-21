@@ -7,12 +7,12 @@ function App() {
 
   return (
     <>
-      <div className="grid sm:grid-cols-2 sm:h-screen gap-2 p-4">
-        <div className="grid place-items-center">
+      <div className="grid sm:grid-cols-2 sm:h-screen gap-2">
+        <div className="grid place-items-center py-4">
           <Picker value={value} setValue={setValue} />
         </div>
-        <div className="grid place-items-center bg-red-300 h-screen">
-          <h1>{value.toString()}</h1>
+        <div className="grid place-items-center bg-red-300">
+          <h1>{value?.toString()}</h1>
         </div>
       </div>
     </>
