@@ -1,11 +1,8 @@
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { TextField } from "@mui/material";
-import { useState } from "react";
 
-export const Picker = () => {
-  const [value, setValue] = useState(new Date());
-
+export const Picker = ({ value, setValue }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <DatePicker
