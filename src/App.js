@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <div className="w-full h-screen flex flex-col md:flex-row place-items-center justify-around">
-        <div className="row-span-1">
+        <div>
           <Picker value={value} setValue={setValue} />
         </div>
-        <div className="row-span-4">
+        <div>
           <Card />
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import { Back } from "./Back";
+import { Front } from "./Front";
 
 export const Card = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -11,27 +13,9 @@ export const Card = () => {
       isFlipped={isFlipped}
       flipDirection="horizontal"
     >
-      <div className="bg-red-400 grid place-items-center drop-shadow-2xl w-[345px] h-[345px]">
-        This is the front of the card.
-        <button
-          onClick={() => {
-            setIsFlipped(!isFlipped);
-          }}
-        >
-          Click to flip
-        </button>
-      </div>
+      <Front isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
 
-      <div className="bg-blue-400 grid place-items-center drop-shadow-2xl w-[345px] h-[345px]">
-        This is the back of the card.
-        <button
-          onClick={() => {
-            setIsFlipped(!isFlipped);
-          }}
-        >
-          Click to flip
-        </button>
-      </div>
+      <Back isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
     </ReactCardFlip>
   );
 };
