@@ -11,7 +11,7 @@ function App() {
         <div className="grid place-items-center">
           <Picker value={value} setValue={setValue} />
         </div>
-        <div className="grid place-items-center">
+        <div className="grid place-items-center bg-red-300 h-screen">
           <h1>{value.toString()}</h1>
         </div>
       </div>
