@@ -18,8 +18,8 @@ function App() {
 
     const response = await fetch(`${URL}`);
     const data = await response.json();
-    setPhotoData({...data})
-    // console.log(photoData);
+    setPhotoData({ ...data });
+    console.log(photoData);
   };
 
   useEffect(() => {

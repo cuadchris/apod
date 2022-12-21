@@ -4,7 +4,7 @@ export const Back = ({ isFlipped, setIsFlipped, photoData }) => {
       onClick={() => {
         setIsFlipped(!isFlipped);
       }}
-      className="bg-blue-200 grid place-items-center drop-shadow-2xl w-[345px] h-[400px] rounded-lg cursor-pointer"
+      className="flex flex-col drop-shadow-2xl w-[345px] h-[400px] rounded-lg cursor-pointer"
     >
       <img
         className="w-full h-full object-cover rounded-lg"
@@ -12,7 +12,11 @@ export const Back = ({ isFlipped, setIsFlipped, photoData }) => {
         alt=""
       />
       {/* overlay */}
-      <div className="absolute w-full h-full bg-black/60 rounded-lg"></div>
+      <div className="flex flex-col justify-evenly p-1 place-items-center absolute top-0 left-0 w-full h-full bg-black/60 rounded-lg text-white">
+        <h1 className="text-lg">{photoData.title}</h1>
+        <p>{photoData.copyright}</p>
+        <p>{photoData.date}</p>
+      </div>
     </div>
   );
 };
