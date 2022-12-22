@@ -19,7 +19,6 @@ function App() {
     const response = await fetch(`${URL}`);
     const data = await response.json();
     setPhotoData({ ...data });
-    console.log(photoData);
   };
 
   useEffect(() => {
@@ -30,7 +29,12 @@ function App() {
     <>
       <div className="w-full h-screen flex flex-col md:flex-row place-items-center justify-around">
         <div>
-          <Picker date={date} setDate={setDate} />
+          <Picker
+            date={date}
+            setDate={setDate}
+            setPhotoData={setPhotoData}
+            photoData={photoData}
+          />
         </div>
         <div>
           <Card photoData={photoData} />
