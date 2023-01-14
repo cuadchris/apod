@@ -4,7 +4,7 @@ export const Front = ({ isFlipped, setIsFlipped, photoData }) => {
       onClick={() => {
         setIsFlipped(!isFlipped);
       }}
-      className="grid place-items-center drop-shadow-2xl w-[345px] h-[400px] md:w-[600px] md:h-[600px] cursor-pointer rounded-lg "
+      className="flex flex-col drop-shadow-2xl w-[345px] h-[400px] md:w-[600px] md:h-[600px] rounded-lg cursor-pointer"
     >
       <img
         className="w-full h-full object-cover rounded-lg"

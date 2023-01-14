@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full flex flex-col md:flex-row place-items-center justify-evenly p-5 gap-8">
+      <div className="w-full h-screen flex flex-col lg:flex-row place-items-center justify-evenly p-5 gap-8">
         <div>
           <Picker
             date={date}
