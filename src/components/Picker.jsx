@@ -3,8 +3,9 @@ import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import moment from "moment/moment";
 import { TextField } from "@mui/material";
 
-export const Picker = ({ date, setDate, setPhotoData }) => {
+export const Picker = ({ date, setDate, setPhotoData, setIsLoading }) => {
   const searchPhoto = async () => {
+    setIsLoading(true);
     const params = new URLSearchParams({
       date: date,
       api_key: process.env.REACT_APP_API_KEY,
@@ -15,6 +16,7 @@ export const Picker = ({ date, setDate, setPhotoData }) => {
     const response = await fetch(`${URL}`);
     const data = await response.json();
     setPhotoData({ ...data });
+    setIsLoading(false);
   };
 
   return (
